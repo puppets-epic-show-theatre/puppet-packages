@@ -1,0 +1,14 @@
+---
+lookup_options:
+  packages::install:
+    merge:
+      strategy: unique
+  packages::latest:
+    merge:
+      strategy: unique
+  packages::remove:
+    merge:
+      strategy: unique
+  packages::versioned:
+    merge:
+      strategy: hash

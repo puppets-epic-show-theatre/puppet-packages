@@ -4,11 +4,11 @@
 #
 
 class packages::manage (
-  $install_packages = hiera_array('packages::install',undef),
-  $latest_packages = hiera_array('packages::latest',undef),
-  $remove_packages = hiera_array('packages::remove',undef),
-  $install_version = hiera_hash('packages::versioned',undef)
-) {
+  $install_packages = $packages::install,
+  $latest_packages = $packages::latest,
+  $remove_packages = $packages::remove,
+  $install_version = $packages::versioned
+) inherits packages {
 
   if $install_packages {
     packages::handle { $install_packages:
@@ -38,7 +38,6 @@ class packages::manage (
       $install_keys:
         data => $install_version
     }
-#   create_resources(package, $install_version, $install_defaults)
   }
 
 }

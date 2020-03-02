@@ -13,7 +13,7 @@ or
 ```
   class { 'packages::manage': }
 ```
-in a hiera yaml: ( if loading through hiera_include('classes') )
+in a hiera yaml:
 
 ---
 ```
@@ -48,28 +48,28 @@ From hiera:
 
 ```
 packages::install:
-  - 'nano'
-  - 'curl'
-  - 'unzip'
+  - nano
+  - curl
+  - unzip
 
 packages::latest:
-  - 'puppet'
-  - 'hiera'
+  - puppet
+  - hiera
 
 packages::versioned:
   nethack-console:
-    ensure: 'purged'
+    ensure: purged
 ```
 - note, when using 'packages::versioned', you may pass any standard
   packaging parameter to the entry. for example:
 ```
 packages::versioned
   gear:
-    ensure: 'latest'
-    provider: 'pip'
+    ensure: latest
+    provider: pip
 
 packages::versioned:
   deep_merge:
-    ensure: 'latest'
-    provider: 'gem'
+    ensure: latest
+    provider: gem
 ```

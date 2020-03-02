@@ -1,0 +1,28 @@
+{
+  "name": "pest-packages",
+  "version": "1.0.0",
+  "author": "Aaron Greengrass, Armin Besirovic, Puppet Enterprise Support Team",
+  "summary": "Module to handle package management via hiera",
+  "license": "MIT",
+  "source": "https://github.com/puppet-enterprise-support-team/puppet-packages",
+  "project_page": "https://github.com/puppet-enterprise-support-team/puppet-packages",
+  "issues_url": "https://github.com/puppet-enterprise-support-team/puppet-packages/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "Ubuntu"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=4.10.0"
+    }
+  ],
+  "description": "Module to handle package management via hiera"
+}
