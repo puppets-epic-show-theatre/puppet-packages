@@ -1,6 +1,6 @@
 {
   "name": "pest-packages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Aaron Greengrass, Armin Besirovic, Puppet Enterprise Support Team",
   "summary": "Module to handle package management via hiera",
   "license": "MIT",
