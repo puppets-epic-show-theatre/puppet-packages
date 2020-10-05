@@ -1,3 +1,8 @@
+# == Class: packages
+#
+# Handles bulk package management via hiera.
+#
+
 class packages(
   Optional[Array[String]] $install = undef,
   Optional[Array[String]] $latest = undef,
