@@ -1,8 +1,8 @@
 # versioned handler
 
 define packages::versioned (
-  $data,
-  $debug = false
+  Hash $data,
+  Boolean $debug = false
 ) {
   if ( ! defined(Package[$name]) ) {
     package { $name:

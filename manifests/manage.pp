@@ -4,11 +4,11 @@
 #
 
 class packages::manage (
-  $install_packages = $packages::install,
-  $latest_packages = $packages::latest,
-  $remove_packages = $packages::remove,
-  $purge_packages = $packages::purge,
-  $install_version = $packages::versioned
+  Optional[Array[String]] $install_packages = $packages::install,
+  Optional[Array[String]] $latest_packages = $packages::latest,
+  Optional[Array[String]] $remove_packages = $packages::remove,
+  Optional[Array[String]] $purge_packages = $packages::purge,
+  Optional[Hash] $install_version = $packages::versioned
 ) inherits packages {
 
   if $install_packages {
