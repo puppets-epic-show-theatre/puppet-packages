@@ -9,6 +9,9 @@ lookup_options:
   packages::remove:
     merge:
       strategy: unique
+  packages::purge:
+    merge:
+      strategy: unique
   packages::versioned:
     merge:
       strategy: hash
