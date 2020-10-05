@@ -7,6 +7,7 @@ class packages::manage (
   $install_packages = $packages::install,
   $latest_packages = $packages::latest,
   $remove_packages = $packages::remove,
+  $purge_packages = $packages::purge,
   $install_version = $packages::versioned
 ) inherits packages {
 
@@ -25,6 +26,12 @@ class packages::manage (
   if $remove_packages {
     packages::handle { $remove_packages:
       ensure => absent,
+    }
+  }
+
+  if $purge_packages {
+    packages::handle { $purge_packages:
+      ensure => purged,
     }
   }
 
