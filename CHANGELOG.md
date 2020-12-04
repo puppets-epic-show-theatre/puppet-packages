@@ -2,14 +2,20 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [1.0.2](https://github.com/puppet-enterprise-support-team/puppet-packages/tree/1.0.2) (2020-10-05)
+## v1.0.3
+
+- Extended test suite to puppet 5 and puppet 6
+- Updated metadata.json
+- Added .sync.yml for `pdk update`
+
+## v1.0.2
 
 ### Added
 - Type hints to all parameters
 - Added purge feature
 - PDK compatibility
 
-## [1.0.0](https://github.com/puppet-enterprise-support-team/puppet-packages/tree/1.0.0) (2020-03-02)
+## v1.0.0
 
 ### Changed
 - Replaced `hiera_array` and `hiera_hash` by module hiera lookup (puppet 4.10+ required)
