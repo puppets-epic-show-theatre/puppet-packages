@@ -1,18 +1,22 @@
 {
   "name": "pest-packages",
-  "version": "1.0.2",
-  "author": "Aaron Greengrass, Armin Besirovic, Puppet Enterprise Support Team",
+  "version": "1.0.3",
+  "author": "Puppets Epic Show Theatre",
   "summary": "Module to handle package management via hiera",
   "license": "MIT",
-  "source": "https://github.com/puppet-enterprise-support-team/puppet-packages",
-  "project_page": "https://github.com/puppet-enterprise-support-team/puppet-packages",
-  "issues_url": "https://github.com/puppet-enterprise-support-team/puppet-packages/issues",
+  "source": "https://github.com/puppets-epic-show-theatre/puppet-packages",
+  "project_page": "https://github.com/puppets-epic-show-theatre/puppet-packages",
+  "issues_url": "https://github.com/puppets-epic-show-theatre/puppet-packages/issues",
   "dependencies": [
 
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "Debian"
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9",
+        "10"
+      ]
     },
     {
       "operatingsystem": "Ubuntu"
