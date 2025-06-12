@@ -1,5 +1,10 @@
-# versioned handler
-
+# @summary Handles versioned package management via hiera.
+#
+# @param data
+#   The data to use for the package.
+# @param debug
+#   Whether to print debug messages. Defaults to false.
+#
 define packages::versioned (
   Hash $data,
   Boolean $debug = false

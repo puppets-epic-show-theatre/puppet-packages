@@ -1,7 +1,10 @@
+# @summary For bulk operations, make sure the package isn't defined otherwhere
 #
-# === Package handler
+# @param ensure
+#   The ensure state of the package. Defaults to 'installed'.
+# @param debug
+#   Whether to print debug messages. Defaults to false.
 #
-# For bulk operations, make sure the package isn't defined otherwhere
 define packages::handle (
   Enum['installed','latest','absent','purged'] $ensure = 'installed',
   Boolean $debug = false
