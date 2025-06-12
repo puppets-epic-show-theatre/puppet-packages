@@ -1,8 +1,16 @@
-# == Class: packages:manage
+# @summary Handles bulk package management via hiera.
 #
-# Handles bulk package management via hiera.
+# @param install_packages
+#   Array of packages to install.
+# @param latest_packages
+#   Array of packages to upgrade to the latest version.
+# @param remove_packages
+#   Array of packages to remove.
+# @param purge_packages
+#   Array of packages to purge.
+# @param install_version
+#   Hash of packages and their versions.
 #
-
 class packages::manage (
   Optional[Array[String]] $install_packages = $packages::install,
   Optional[Array[String]] $latest_packages = $packages::latest,
@@ -10,7 +18,6 @@ class packages::manage (
   Optional[Array[String]] $purge_packages = $packages::purge,
   Optional[Hash] $install_version = $packages::versioned
 ) inherits packages {
-
   if $install_packages {
     packages::handle { $install_packages:
       ensure => installed,
@@ -43,9 +50,7 @@ class packages::manage (
     $install_keys = keys($install_version)
     packages::versioned {
       $install_keys:
-        data => $install_version
+        data => $install_version,
     }
   }
-
 }
-
