@@ -12,11 +12,7 @@
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "9",
-        "10"
-      ]
+      "operatingsystem": "Debian"
     },
     {
       "operatingsystem": "Ubuntu"
@@ -25,7 +21,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">=4.10.0"
+      "version_requirement": ">= 7.0.0 < 9.0.0"
     }
   ],
   "description": "Module to handle package management via hiera",
